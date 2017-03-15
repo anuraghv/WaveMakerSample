@@ -1,0 +1,8 @@
+---
+applications:
+- name: WaveMakerSample
+  memory: 1G
+  instances: 1
+  path: WaveMakerSample.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  stack: cflinuxfs2

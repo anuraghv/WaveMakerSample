@@ -1,11 +1,32 @@
 <wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
     <wm-header content="header" name="header" height="auto"></wm-header>
-    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Pager" name="livelist1">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-card name="card1">
+                        <wm-card-content fontsize="0.8" fontunit="em" name="card_content1">
+                            <wm-layoutgrid columns="2" name="layoutgrid1">
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn colwidth="6" columnwidth="6" class="col-xs-6" name="gridcolumn1">
+                                        <wm-picture name="Picture" width="100%" picturesource="bind:Variables.HrdbEmployeeData.dataSet.data[$i].picurl"></wm-picture>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" columnwidth="6" padding="unset 1.25em" class="col-xs-6" name="gridcolumn2">
+                                        <wm-label name="ID" caption="bind:Variables.HrdbEmployeeData.dataSet.empId" class="text-muted p" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="Name" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" class="h4" margin="0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="JobTitle" caption="bind:Variables.HrdbEmployeeData.dataSet.jobTitle" class="h5" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="Department" caption="bind:Variables.HrdbEmployeeData.dataSet.department.name" class="p text-muted" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="Location" caption="bind:Variables.HrdbEmployeeData.dataSet.zip" class="text-muted p" whitespace="nowrap"></wm-label>
+                                        <wm-anchor name="PhoneNumber" caption="" class="h5" hyperlink="tel:" margin="0px unset" whitespace="nowrap"></wm-anchor>
+                                        <wm-anchor name="EmailID" class="p text-muted" hyperlink="mailto://" caption="" whitespace="nowrap"></wm-anchor>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-card-content>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-livelist>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>
