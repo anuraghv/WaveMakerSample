@@ -2,7 +2,7 @@
     <wm-header content="header" name="header" height="auto"></wm-header>
     <wm-content name="content">
         <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
-            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Pager" name="livelist1">
+            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Pager" name="livelist1" match="alphabet" groupby="firstname">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-card name="card1">
                         <wm-card-content fontsize="0.8" fontunit="em" name="card_content1">
