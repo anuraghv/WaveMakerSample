@@ -13,6 +13,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/compose/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/hrdb/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -104,6 +111,7 @@
                         <configuration>
                             <sources>
                             
+                                <source>services/compose/src</source>
                                 <source>services/hrdb/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
@@ -286,6 +294,11 @@
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <version>2.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

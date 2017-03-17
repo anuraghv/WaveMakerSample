@@ -1,0 +1,33 @@
+{
+  "username" : "admin",
+  "password" : "7b6a43524a0b142f534e4c5e3a2915013b5d425354425c32205754",
+  "url" : "jdbc:mysql://sl-us-dal-9-portal.6.dblayer.com:21417/compose?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "compose",
+  "packageName" : "com.wavemakersample.compose",
+  "dbType" : "MySQL",
+  "host" : "sl-us-dal-9-portal.6.dblayer.com",
+  "dbName" : "compose",
+  "port" : "21417",
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "TODOs",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}
