@@ -1,0 +1,191 @@
+<style id="Main.css">
+</style>
+<script id="Main.js">
+Application.$controller("BoxPrefabController", ["$scope", function($scope) {
+    "use strict";
+
+    /*
+     * This function will be invoked when any of this prefab's property is changed
+     * @key: property name
+     * @newVal: new value of the property
+     * @oldVal: old value of the property
+     */
+    function propertyChangeHandler(key, newVal, oldVal) {
+            /*
+		switch (key) {
+			case "prop1":
+				// do something with newVal for property 'prop1'
+				break;
+			case "prop2":
+				// do something with newVal for property 'prop2'
+				break;
+		}
+		*/
+        }
+        /* register the property change handler */
+    $scope.propertyManager.add($scope.propertyManager.ACTIONS.CHANGE, propertyChangeHandler);
+
+    $scope.onInitPrefab = function() {
+        // this method will be triggered post initialization of the prefab.
+    };
+
+
+    $scope.BoxConnectorGetLoginURLonSuccess = function(variable, data) {
+        window.location = data;
+    };
+
+
+
+    $scope.BoxConnectorGetAccessTokenonSuccess = function(variable, data) {
+        if (data === "") {
+            $scope.Variables.BoxConnectorGetLoginURL.update();
+        } else {
+            $scope.accesstoken = data;
+        }
+    };
+
+}]);
+</script>
+<script id="Main.variables.json">
+var _MainPage_Variables_ ={
+  "BoxConnectorCallback" : {
+    "_id" : "wm-BoxConnectorCallback-wm.ServiceVariable-1489792306374",
+    "name" : "BoxConnectorCallback",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "service" : "BoxConnector",
+    "operation" : "callback",
+    "operationId" : "BoxConnectorController_callback",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "BoxConnector"
+  },
+  "BoxConnectorGetAccessToken" : {
+    "_id" : "wm-BoxConnectorGetAccessToken-wm.ServiceVariable-1489792343827",
+    "name" : "BoxConnectorGetAccessToken",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "string",
+    "service" : "BoxConnector",
+    "operation" : "getAccessToken",
+    "operationId" : "BoxConnectorController_getAccessToken",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "BoxConnectorGetAccessTokenonSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "BoxConnector"
+  },
+  "BoxConnectorGetCallbackURL" : {
+    "_id" : "wm-BoxConnectorGetCallbackURL-wm.ServiceVariable-1489792377378",
+    "name" : "BoxConnectorGetCallbackURL",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "string",
+    "service" : "BoxConnector",
+    "operation" : "getCallbackURL",
+    "operationId" : "BoxConnectorController_getCallbackURL",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "BoxConnector"
+  },
+  "BoxConnectorGetLoginURL" : {
+    "_id" : "wm-BoxConnectorGetLoginURL-wm.ServiceVariable-1489792406090",
+    "name" : "BoxConnectorGetLoginURL",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "string",
+    "service" : "BoxConnector",
+    "operation" : "getLoginURL",
+    "operationId" : "BoxConnectorController_getLoginURL",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "BoxConnectorGetLoginURLonSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "BoxConnector"
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}
+</script>
+<script id="Main.html" type="text/ng-template">
+<wm-page data-ng-controller="BoxPrefabController" name="page1">
+    <wm-view class="container" backgroundcolor="#fff" name="view1">
+        <wm-form title="OAuth Configuration" class="panel-default" name="form1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn name="gridcolumn1" columnwidth="2">
+                        <wm-label name="label7" caption="Callback URL" fontweight="bold"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn4">
+                        <wm-label name="label8" caption="bind:Variables.BoxConnectorGetCallbackURL.dataSet.value"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn name="gridcolumn2" columnwidth="2">
+                        <wm-label name="label5" caption="Access Token" fontweight="bold"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn5">
+                        <wm-label name="label6" caption="bind:accesstoken"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn5_1">
+                        <wm-label name="label5_1" caption="Requires Header" fontweight="bold"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn6">
+                        <wm-label name="label6_1" caption="bind:'Authorization : Bearer&amp;nbsp'+ accesstoken"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-form>
+    </wm-view>
+</wm-page>
+</script>

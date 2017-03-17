@@ -1,0 +1,94 @@
+{
+  "BoxConnectorController_getCallbackURL" : {
+    "id" : "BoxConnectorController_getCallbackURL",
+    "service" : "BoxConnector",
+    "controller" : "BoxConnectorController",
+    "operationType" : "string",
+    "type" : "string",
+    "wmServiceOperationInfo" : {
+      "name" : "getCallbackURL",
+      "methodType" : "get",
+      "relativePath" : "/boxConnector/callbackURL",
+      "directPath" : "/boxConnector/callbackURL",
+      "httpMethod" : "get",
+      "parameters" : [ ],
+      "definitions" : { },
+      "produces" : [ "application/json" ],
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  },
+  "BoxConnectorController_callback" : {
+    "id" : "BoxConnectorController_callback",
+    "service" : "BoxConnector",
+    "controller" : "BoxConnectorController",
+    "operationType" : "object",
+    "type" : "object",
+    "wmServiceOperationInfo" : {
+      "name" : "callback",
+      "methodType" : "get",
+      "relativePath" : "/boxConnector/callback",
+      "directPath" : "/boxConnector/callback",
+      "httpMethod" : "get",
+      "parameters" : [ ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  },
+  "BoxConnectorController_getLoginURL" : {
+    "id" : "BoxConnectorController_getLoginURL",
+    "service" : "BoxConnector",
+    "controller" : "BoxConnectorController",
+    "operationType" : "string",
+    "type" : "string",
+    "wmServiceOperationInfo" : {
+      "name" : "getLoginURL",
+      "methodType" : "get",
+      "relativePath" : "/boxConnector/loginURl",
+      "directPath" : "/boxConnector/loginURl",
+      "httpMethod" : "get",
+      "parameters" : [ ],
+      "definitions" : { },
+      "produces" : [ "application/json" ],
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  },
+  "BoxConnectorController_getAccessToken" : {
+    "id" : "BoxConnectorController_getAccessToken",
+    "service" : "BoxConnector",
+    "controller" : "BoxConnectorController",
+    "operationType" : "string",
+    "type" : "string",
+    "wmServiceOperationInfo" : {
+      "name" : "getAccessToken",
+      "methodType" : "get",
+      "relativePath" : "/boxConnector/accessToken",
+      "directPath" : "/boxConnector/accessToken",
+      "httpMethod" : "get",
+      "parameters" : [ ],
+      "definitions" : { },
+      "produces" : [ "application/json" ],
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  }
+}
