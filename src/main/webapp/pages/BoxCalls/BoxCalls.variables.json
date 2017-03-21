@@ -8,6 +8,10 @@
       "target" : "Authorization",
       "value" : "bind:'Bearer ' + Widgets.BoxPrefab1.accesstoken",
       "type" : "string"
+    }, {
+      "target" : "folderid",
+      "value" : "0",
+      "type" : "string"
     } ],
     "type" : "box.RootResponse",
     "service" : "box",

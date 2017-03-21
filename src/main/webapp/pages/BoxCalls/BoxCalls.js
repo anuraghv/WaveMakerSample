@@ -38,7 +38,7 @@ Application.$controller("BoxCallsPageController", ["$scope", function($scope) {
         var newData = [];
         var rootFolder = {};
         rootFolder.label = "All Items";
-        rootFolder.icon = "fa fa-folder";
+        rootFolder.icon = "fa";
         rootFolder.id = 0;
         rootFolder.children = [];
 
@@ -47,7 +47,7 @@ Application.$controller("BoxCallsPageController", ["$scope", function($scope) {
                 var entry = data.entries[i];
                 var folder = {};
                 folder.label = entry.name;
-                folder.icon = (entry.type === "folder") ? "fa fa-folder" : "wi wi-picture-as-pdf";
+                folder.icon = (entry.type === "folder") ? "fa" : "wi wi-picture-as-pdf";
                 folder.id = entry.id;
                 folder.type = entry.type;
                 rootFolder.children.push(folder);
@@ -59,12 +59,6 @@ Application.$controller("BoxCallsPageController", ["$scope", function($scope) {
         return newData;
     };
 
-
-    $scope.button1Click = function($event, $isolateScope) {
-        var sv = $scope.Variables.GetFolderItems;
-        sv.setInput("folderid", 0);
-        sv.invoke();
-    };
 
 
     $scope.svBoxGetFolderItemsonBeforeDatasetReady = function(variable, data) {
@@ -81,7 +75,7 @@ Application.$controller("BoxCallsPageController", ["$scope", function($scope) {
                 var entry = data.entries[i];
                 var folder = {};
                 folder.label = entry.name;
-                folder.icon = (entry.type === "folder") ? "fa fa-folder" : "wi wi-picture-as-pdf";
+                folder.icon = (entry.type === "folder") ? "fa" : "wi wi-picture-as-pdf";
                 folder.id = entry.id;
                 folder.type = entry.type;
                 if (node.children === undefined || node.children === null) {
