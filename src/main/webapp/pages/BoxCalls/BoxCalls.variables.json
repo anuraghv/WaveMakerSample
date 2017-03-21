@@ -1,0 +1,89 @@
+{
+  "GetFolderItems" : {
+    "_id" : "wm-GetFolderItems-wm.ServiceVariable-1489795845799",
+    "name" : "GetFolderItems",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Authorization",
+      "value" : "bind:'Bearer ' + Widgets.BoxPrefab1.accesstoken",
+      "type" : "string"
+    } ],
+    "type" : "box.RootResponse",
+    "service" : "box",
+    "operation" : "invoke",
+    "operationId" : "box_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onBeforeDatasetReady" : "GetFolderItemsonBeforeDatasetReady($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "svBoxGetEmbedLink" : {
+    "_id" : "wm-svBoxGetEmbedLink-wm.ServiceVariable-1490060101042",
+    "name" : "svBoxGetEmbedLink",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "fields",
+      "value" : "expiring_embed_link",
+      "type" : "string"
+    }, {
+      "target" : "Authorization",
+      "value" : "bind:'Bearer ' + Widgets.BoxPrefab1.accesstoken",
+      "type" : "string"
+    } ],
+    "type" : "boxEmbedLink.RootResponse",
+    "service" : "boxEmbedLink",
+    "operation" : "invoke",
+    "operationId" : "boxEmbedLink_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "svBoxGetFolderItems" : {
+    "_id" : "wm-svBoxGetFolderItems-wm.ServiceVariable-1490044334430",
+    "name" : "svBoxGetFolderItems",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Authorization",
+      "value" : "bind:'Bearer ' + Widgets.BoxPrefab1.accesstoken",
+      "type" : "string"
+    } ],
+    "type" : "BoxGetFolderItems.RootResponse",
+    "service" : "BoxGetFolderItems",
+    "operation" : "invoke",
+    "operationId" : "BoxGetFolderItems_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onBeforeDatasetReady" : "svBoxGetFolderItemsonBeforeDatasetReady($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "doNotExecute",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "ded2ea23-e125-4da4-badc-721926ce90ae",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "box2",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "api.box.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/boxEmbedLink/invoke/files/{fileid}" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "boxEmbedLink_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "description" : "Authorization",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "fields",
+          "in" : "query",
+          "description" : "fields",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "fileid",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/boxEmbedLink/invoke/files/{fileid}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.boxEmbedLink.scheme}://${rest.boxEmbedLink.host}${rest.boxEmbedLink.basepath}/files/{fileid}"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "etag", "expiring_embed_link", "id", "type" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "etag" : {
+          "type" : "string"
+        },
+        "expiring_embed_link" : {
+          "$ref" : "#/definitions/expiring_embed_link"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "boxEmbedLink.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "expiring_embed_link" : {
+      "required" : [ "url" ],
+      "properties" : {
+        "url" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "boxEmbedLink.expiring_embed_link",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

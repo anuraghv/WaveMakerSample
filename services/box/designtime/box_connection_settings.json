@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "https://api.box.com/2.0/folders/0/items",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : {
+    "Authorization" : [ "Bearer GNfjjD9aJv1K9U6nVbrUPZoiQOmzlhRx" ]
+  },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"total_count\":3,\"entries\":[{\"type\":\"folder\",\"id\":\"21779229663\",\"sequence_id\":\"0\",\"etag\":\"0\",\"name\":\"Test Folder\"},{\"type\":\"folder\",\"id\":\"21962119293\",\"sequence_id\":\"0\",\"etag\":\"0\",\"name\":\"Test Folder 1\"},{\"type\":\"folder\",\"id\":\"21962129231\",\"sequence_id\":\"0\",\"etag\":\"0\",\"name\":\"Test Folder2\"}],\"offset\":0,\"limit\":100,\"order\":[{\"by\":\"type\",\"direction\":\"ASC\"},{\"by\":\"name\",\"direction\":\"ASC\"}]}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "ATS" ],
+      "Date" : [ "Mon, 20 Mar 2017 19:56:12 GMT" ],
+      "Content-Type" : [ "application/json" ],
+      "Strict-Transport-Security" : [ "max-age=31536000; includeSubDomains" ],
+      "Cache-Control" : [ "no-cache, no-store" ],
+      "Vary" : [ "Accept-Encoding" ],
+      "Age" : [ "0" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

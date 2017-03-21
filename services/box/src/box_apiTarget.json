@@ -1,0 +1,131 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.box.basepath}",
+  "paths" : {
+    "/folders/{folderid}/items" : {
+      "x-WM-BASE_PATH" : "/folders/{folderid}/items",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : "Authorization",
+          "name" : "Authorization",
+          "x-WM-EDITABLE" : true,
+          "type" : "string",
+          "required" : false,
+          "in" : "header"
+        }, {
+          "name" : "folderid",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "box_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.box.scheme}://${rest.box.host}${rest.box.basepath}/folders/{folderid}/items"
+    }
+  },
+  "host" : "${rest.box.host}",
+  "schemes" : [ "${rest.box.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "box.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "limit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "order" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/orderEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "entries" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/entriesEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "offset" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "total_count" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      },
+      "required" : [ "entries", "limit", "offset", "order", "total_count" ]
+    },
+    "orderEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "box.orderEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "direction" : {
+          "type" : "string"
+        },
+        "by" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "by", "direction" ]
+    },
+    "entriesEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "box.entriesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "etag" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "sequence_id" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "etag", "id", "name", "sequence_id", "type" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "18372a0f-7e19-4dd7-91f7-5bd94e979f2f",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "box2",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

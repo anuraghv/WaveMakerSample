@@ -1,0 +1,129 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "8126c4c0-92af-45f6-83e9-8318c48660d0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "box2",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "api.box.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/BoxGetFolderItems/invoke/folders/{folderid}/items" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "BoxGetFolderItems_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "description" : "Authorization",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "folderid",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/BoxGetFolderItems/invoke/folders/{folderid}/items",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.BoxGetFolderItems.scheme}://${rest.BoxGetFolderItems.host}${rest.BoxGetFolderItems.basepath}/folders/{folderid}/items"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "entries", "limit", "offset", "order", "total_count" ],
+      "properties" : {
+        "limit" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "order" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/orderEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "entries" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/entriesEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "offset" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "total_count" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "BoxGetFolderItems.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "orderEntryItem" : {
+      "required" : [ "by", "direction" ],
+      "properties" : {
+        "direction" : {
+          "type" : "string"
+        },
+        "by" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "BoxGetFolderItems.orderEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "entriesEntryItem" : {
+      "required" : [ "etag", "id", "name", "sequence_id", "type" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "etag" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "sequence_id" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "BoxGetFolderItems.entriesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

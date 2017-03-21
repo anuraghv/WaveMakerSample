@@ -14,7 +14,7 @@
       "parameters" : [ ],
       "definitions" : { },
       "produces" : [ "application/json" ],
-      "consumes" : null,
+      "consumes" : [ ],
       "authorization" : null,
       "proxySettings" : {
         "web" : true,
@@ -36,8 +36,8 @@
       "httpMethod" : "get",
       "parameters" : [ ],
       "definitions" : { },
-      "produces" : null,
-      "consumes" : null,
+      "produces" : [ ],
+      "consumes" : [ ],
       "authorization" : null,
       "proxySettings" : {
         "web" : true,
@@ -60,7 +60,7 @@
       "parameters" : [ ],
       "definitions" : { },
       "produces" : [ "application/json" ],
-      "consumes" : null,
+      "consumes" : [ ],
       "authorization" : null,
       "proxySettings" : {
         "web" : true,
@@ -83,7 +83,7 @@
       "parameters" : [ ],
       "definitions" : { },
       "produces" : [ "application/json" ],
-      "consumes" : null,
+      "consumes" : [ ],
       "authorization" : null,
       "proxySettings" : {
         "web" : true,

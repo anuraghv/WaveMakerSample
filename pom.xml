@@ -13,6 +13,27 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/BoxGetFolderItems/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/box/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/boxEmbedLink/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/compose/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -111,6 +132,9 @@
                         <configuration>
                             <sources>
                             
+                                <source>services/BoxGetFolderItems/src</source>
+                                <source>services/box/src</source>
+                                <source>services/boxEmbedLink/src</source>
                                 <source>services/compose/src</source>
                                 <source>services/hrdb/src</source>
                                 <source>services/securityService/src</source>

@@ -1,0 +1,32 @@
+{
+  "endpointAddress" : "https://api.box.com/2.0/files/149527587158",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : {
+    "Authorization" : [ "Bearer 1fFsQMMBV7befgKrZfddbcjrxyk9wBs5" ]
+  },
+  "queryParams" : {
+    "fields" : "expiring_embed_link"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"type\":\"file\",\"id\":\"149527587158\",\"etag\":\"0\",\"expiring_embed_link\":{\"url\":\"https://app.box.com/preview/expiring_embed/gvoct6FE!cbqBWSaLe0RWzZouo8MCDs6uDIPrF1r9bTo3_oAkrAtbmTqEpq4oPnlgzSftomgdXLITZgpHHqz2M0H557VsxsgpmUBDgaC0nzIS_gBLverH5S_D7oV-L1hCOxS_KdhsrNCYKAN6b8HE5H8QhxYibo2b2-vaYfK3t1LGmA_1G4cyoa7YajTgxadDHy_PwFMEXI21DWxABXCeA6yERHDnQB0VhwU-3Z8NtNxVpSsnKYipEpVRWCscEsnosuLR30eet-4SR3qwaZQ7K1qAXyE_nLv-JpJm2-9aNY2ee5atT3yrY8Kke3dHATOuJuhFs1894-c_1UMyb6l6MeLzRiynm_C6QtB2GEYKhDfI7pV3RN7niJpPF5KHYy0MswAfWSiIgI8w1lxCt2me5Z5EQv3BtmZ3yfg4NWTw41rT5FbxLZIISCAb9G9PqQw6PdD_cjJUTCMiC4Z0iJasIU8Jloa_wR8FTj2NCwJlnFRPIvcuuidKau2d4vJecLb0noU1MVcsc6pORipLIkAJ1Uemp9Xg0RAcFitTM24J9xRCncJGQ6qGst_S01Fhc-XzceVGbODTCRB5xzsD9SFmJhva-WzeYl6Sfr650zmOba4dlbzhUZkkuvOTwiPn\"}}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "ATS" ],
+      "Date" : [ "Tue, 21 Mar 2017 01:32:35 GMT" ],
+      "Content-Type" : [ "application/json" ],
+      "Strict-Transport-Security" : [ "max-age=31536000; includeSubDomains" ],
+      "ETag" : [ "\"0\"" ],
+      "Cache-Control" : [ "no-cache, no-store" ],
+      "Vary" : [ "Accept-Encoding" ],
+      "Age" : [ "1" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}
