@@ -1,4 +1,4 @@
-Application.$controller("BoxCallsPageController", ["$scope", function($scope) {
+Application.$controller("BoxCallsPageController", ["$scope", "$timeout", function($scope, $timeout) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -12,6 +12,11 @@ Application.$controller("BoxCallsPageController", ["$scope", function($scope) {
          * e.g. to get value of text widget named 'username' use following script
          * '$scope.Widgets.username.datavalue'
          */
+
+        setTimeout(function() {
+            var sv = $scope.Variables.GetFolderItems;
+            sv.invoke();
+        }, 1500);
     };
     $scope.treeData = [];
 
