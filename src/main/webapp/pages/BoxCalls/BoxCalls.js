@@ -111,3 +111,10 @@ Application.$controller("BoxCallsPageController", ["$scope", "$timeout", functio
     };
 
 }]);
+
+Application.$controller("pagedialog1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);

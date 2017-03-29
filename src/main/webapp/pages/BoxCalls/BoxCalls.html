@@ -10,6 +10,7 @@
                         <wm-tree name="tree1" on-select="tree1Select($event, $scope, $item, $path)" levels="3" treeicons="folder" scopedataset="treeData"></wm-tree>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="9" name="gridcolumn2">
+                        <wm-button class="btn-default" caption="Create Signature Request" type="button" margin="unset 0.5em" name="button1"></wm-button>
                         <wm-iframe name="iframe1" width="100%" height="700px" iframesrc="bind:Variables.svBoxGetEmbedLink.dataSet.expiring_embed_link.url"></wm-iframe>
                     </wm-gridcolumn>
                 </wm-gridrow>
@@ -21,4 +22,7 @@
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view class="dialog-view" name="view1">
+        <wm-pagedialog name="pagedialog1"></wm-pagedialog>
+    </wm-view>
 </wm-page>
