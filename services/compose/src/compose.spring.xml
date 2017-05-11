@@ -71,6 +71,9 @@
                 <prop key="hibernate.schema_update.unique_constraint_strategy">
                     skip
                 </prop>
+                <prop key="hibernate.id.new_generator_mappings">
+                    true
+                </prop>
             </props>
         </property>
     </bean>

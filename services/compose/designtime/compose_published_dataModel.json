@@ -28,6 +28,7 @@
       "precision" : 10,
       "primaryKey" : true,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "number",
       "unique" : true
     }, {
@@ -53,6 +54,7 @@
       "precision" : 0,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "string",
       "unique" : false
     }, {
@@ -78,6 +80,7 @@
       "precision" : 0,
       "primaryKey" : false,
       "scale" : 0,
+      "sequenceSchema" : null,
       "sqlType" : "date",
       "unique" : false
     } ],
@@ -91,7 +94,8 @@
       "composite" : false,
       "generator" : {
         "generatorType" : "identity",
-        "generatorValue" : null
+        "generatorValue" : null,
+        "schemaName" : null
       },
       "name" : "PRIMARY",
       "virtual" : false

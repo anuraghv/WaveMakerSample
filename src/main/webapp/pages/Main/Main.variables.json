@@ -62,7 +62,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "budget",
           "type" : "integer",
@@ -134,7 +134,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "location",
           "type" : "string",
@@ -146,7 +146,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "tenantId",
           "type" : "integer",
@@ -219,7 +219,7 @@
             "precision" : 19,
             "generator" : "assigned",
             "isRelated" : false,
-            "scale" : 0
+            "scale" : 2
           }, {
             "fieldName" : "budget",
             "type" : "integer",
@@ -291,7 +291,7 @@
             "precision" : 19,
             "generator" : "assigned",
             "isRelated" : false,
-            "scale" : 0
+            "scale" : 2
           }, {
             "fieldName" : "location",
             "type" : "string",
@@ -303,7 +303,7 @@
             "precision" : 19,
             "generator" : "assigned",
             "isRelated" : false,
-            "scale" : 0
+            "scale" : 2
           }, {
             "fieldName" : "tenantId",
             "type" : "integer",
@@ -356,7 +356,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "lastname",
           "type" : "string",
@@ -368,7 +368,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "street",
           "type" : "string",
@@ -380,7 +380,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "city",
           "type" : "string",
@@ -392,7 +392,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "state",
           "type" : "string",
@@ -404,7 +404,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "zip",
           "type" : "string",
@@ -416,7 +416,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "birthdate",
           "type" : "date",
@@ -428,7 +428,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "picurl",
           "type" : "string",
@@ -440,7 +440,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "jobTitle",
           "type" : "string",
@@ -452,7 +452,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "username",
           "type" : "string",
@@ -464,7 +464,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "password",
           "type" : "string",
@@ -476,7 +476,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "role",
           "type" : "string",
@@ -488,7 +488,7 @@
           "precision" : 19,
           "generator" : "assigned",
           "isRelated" : false,
-          "scale" : 0
+          "scale" : 2
         }, {
           "fieldName" : "tenantId",
           "type" : "integer",
@@ -525,7 +525,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "lastname",
         "type" : "string",
@@ -537,7 +537,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "street",
         "type" : "string",
@@ -549,7 +549,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "city",
         "type" : "string",
@@ -561,7 +561,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "state",
         "type" : "string",
@@ -573,7 +573,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "zip",
         "type" : "string",
@@ -585,7 +585,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "birthdate",
         "type" : "date",
@@ -597,7 +597,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "picurl",
         "type" : "string",
@@ -609,7 +609,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "jobTitle",
         "type" : "string",
@@ -621,7 +621,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "username",
         "type" : "string",
@@ -633,7 +633,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "password",
         "type" : "string",
@@ -645,7 +645,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "role",
         "type" : "string",
@@ -657,7 +657,7 @@
         "precision" : 19,
         "generator" : "assigned",
         "isRelated" : false,
-        "scale" : 0
+        "scale" : 2
       }, {
         "fieldName" : "tenantId",
         "type" : "integer",

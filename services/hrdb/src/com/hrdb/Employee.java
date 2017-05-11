@@ -7,7 +7,6 @@ package com.hrdb;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -52,8 +51,8 @@ public class Employee implements Serializable {
     private Integer tenantId;
     private Department department;
     private Employee employeeByManagerId;
-    private List<Employee> employeesForManagerId = new ArrayList<>();
-    private List<Vacation> vacations = new ArrayList<>();
+    private List<Employee> employeesForManagerId;
+    private List<Vacation> vacations;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
