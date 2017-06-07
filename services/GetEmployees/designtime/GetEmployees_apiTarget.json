@@ -1,0 +1,116 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "f5489123-bfe2-4441-8cdf-c954ae719ad4",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "us",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "api.us.apiconnect.ibmcloud.com",
+  "basePath" : "/gsessionusibmcom-dev",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/employeecatalog/employees" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "GetEmployees_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "security" : [ {
+          "WM_Rest_Service_Authorization" : [ ]
+        } ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/employeecatalog/employees",
+      "x-WM-COMPLETE_PATH" : "${rest.GetEmployees.scheme}://${rest.GetEmployees.host}${rest.GetEmployees.basepath}/employeecatalog/employees",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "securityDefinitions" : {
+    "WM_Rest_Service_Authorization" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "offset", "rows", "total_rows" ],
+      "properties" : {
+        "total_rows" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "offset" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "rows" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/rowsEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetEmployees.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "value" : {
+      "required" : [ "email", "favorite", "first_name", "img", "last_name", "title" ],
+      "properties" : {
+        "first_name" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "last_name" : {
+          "type" : "string"
+        },
+        "img" : {
+          "type" : "string"
+        },
+        "favorite" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetEmployees.value",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "rowsEntryItem" : {
+      "required" : [ "id", "key", "value" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "value" : {
+          "$ref" : "#/definitions/value"
+        },
+        "key" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetEmployees.rowsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

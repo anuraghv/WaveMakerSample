@@ -1,0 +1,31 @@
+{
+  "GetEmployeesInvoke" : {
+    "_id" : "wm-GetEmployeesInvoke-wm.ServiceVariable-1496357883467",
+    "name" : "GetEmployeesInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "wm_auth_username",
+      "value" : "c5fd771e-b24f-481f-8b23-4ca8d5f5cf40"
+    }, {
+      "target" : "wm_auth_password",
+      "value" : "X4sR4bJ4pH7uP4fX8tD4dG0tJ0tC3vN7kW1uW5eU5lR6vR6qE6"
+    } ],
+    "type" : "GetEmployees.RootResponse",
+    "service" : "GetEmployees",
+    "operation" : "invoke",
+    "operationId" : "GetEmployees_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "RestServiceVirtual"
+  }
+}

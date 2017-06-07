@@ -1,0 +1,115 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "f993c2ca-0101-4707-8ef4-1bcca2bb675f",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "us",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "api.us.apiconnect.ibmcloud.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/favorites/invoke/employeecatalog/employees/favorites" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "favorites_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "security" : [ {
+          "WM_Rest_Service_Authorization" : [ ]
+        } ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/favorites/invoke/employeecatalog/employees/favorites",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.favorites.scheme}://${rest.favorites.host}${rest.favorites.basepath}/employeecatalog/employees/favorites"
+    }
+  },
+  "securityDefinitions" : {
+    "WM_Rest_Service_Authorization" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "offset", "rows", "total_rows" ],
+      "properties" : {
+        "total_rows" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "offset" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "rows" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/rowsEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "favorites.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "value" : {
+      "required" : [ "email", "favorite", "first_name", "img", "last_name", "title" ],
+      "properties" : {
+        "first_name" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "last_name" : {
+          "type" : "string"
+        },
+        "img" : {
+          "type" : "string"
+        },
+        "favorite" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "favorites.value",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "rowsEntryItem" : {
+      "required" : [ "id", "key", "value" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "value" : {
+          "$ref" : "#/definitions/value"
+        },
+        "key" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "favorites.rowsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

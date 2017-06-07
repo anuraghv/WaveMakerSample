@@ -7,6 +7,10 @@
   "type" : "PARTIAL",
   "params" : [ ]
 }, {
+  "name" : "EmployeeConnect",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Login",
   "type" : "PAGE",
   "params" : [ ]

@@ -20,6 +20,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/GetEmployees/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/box/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -35,6 +42,13 @@
             <resource>
                 <filtering>true</filtering>
                 <directory>services/compose/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/favorites/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
@@ -130,9 +144,11 @@
                         <configuration>
                             <sources>
                                 <source>services/BoxGetFolderItems/src</source>
+                                <source>services/GetEmployees/src</source>
                                 <source>services/box/src</source>
                                 <source>services/boxEmbedLink/src</source>
                                 <source>services/compose/src</source>
+                                <source>services/favorites/src</source>
                                 <source>services/hrdb/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
@@ -338,6 +354,6 @@
         <spring.version>4.2.0.RELEASE</spring.version>
         <profile.props.file>development.properties</profile.props.file>
         <spring.security.version>4.1.2.RELEASE</spring.security.version>
-        <wavemaker.studio.version>8.4.2.1</wavemaker.studio.version>
+        <wavemaker.studio.version>8.4.2.2</wavemaker.studio.version>
     </properties>
 </project>
